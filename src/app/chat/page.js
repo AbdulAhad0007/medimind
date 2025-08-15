@@ -98,6 +98,22 @@ export default function ChatPage() {
     synth.speak(utter)
   }
 
+  // Determine if running on a touch/mobile device
+  const isTouchDevice = () => {
+    if (typeof window === 'undefined') return false
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0) || (navigator.userAgentData && navigator.userAgentData.mobile)
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      // Only trigger Enter->Send for non-touch (desktop) devices
+      if (!isTouchDevice()) {
+        e.preventDefault()
+        sendMessage()
+      }
+    }
+  }
+
   // Render message text with clickable links
   const renderMessageText = (text) => {
     try {
@@ -198,12 +214,12 @@ export default function ChatPage() {
         <div ref={messagesEndRef} />
       </div>
       <div className="flex mt-4">
-        <input
-          type="text"
+        <textarea
           value={input}
           onChange={e => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder={t.placeholderSymptoms}
-          className="flex-1 border rounded-l-lg px-3 py-2"
+          className="flex-1 border rounded-l-lg px-3 py-2 resize-none h-12"
         />
         <button
           onClick={toggleListening}
