@@ -42,7 +42,7 @@ Notes:
 npm run dev
 ```
 
-Open http://localhost:3000
+Open https://medimind-one.vercel.app
 
 ## Important files & where to edit
 - `src/app/page.js` — main landing page content and badge text
