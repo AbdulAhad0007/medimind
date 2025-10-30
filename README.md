@@ -60,7 +60,7 @@ Before running this application, make sure you have:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/AbdulAhad0007/medimind.git
-   cd health-bot-solutions-main
+   cd medimind
    ```
 
 2. **Install dependencies**
@@ -193,9 +193,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support or questions:
-- Email: support@healthai.com
-- Phone: +1 (555) 123-4567
-- Location: San Francisco, CA
+- Email: support@medimind.com
+- Phone: +91882XXXXXXX
 
 ---
 
