@@ -1,4 +1,4 @@
-# MediMind - AI-Powered Health Assistant
+# Medi - AI-Powered Health Assistant
 
 A modern, responsive web application that provides AI-powered health guidance and wellness tools. Built with React, TypeScript, and powered by advanced AI technology to help users understand their symptoms and get personalized health recommendations.
 
